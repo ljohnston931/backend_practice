@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Submit an Activity</title>
+        <link rel="stylesheet" href="/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,800,900" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <ul id="menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li>
+                        <a href="/pages/which_day.html">Days</a>
+                        <ul class="hidden">
+                            <li><a href="/pages/days/monday.html">Monday</a></li>
+                            <li><a href="/pages/days/tuesday.html">Tuesday</a></li>
+                            <li><a href="/pages/days/wednesday.html">Wednesday</a></li>
+                            <li><a href="/pages/days/thursday.html">Thursday</a></li>
+                            <li><a href="/pages/days/friday.html">Friday</a></li>
+                            <li><a href="/pages/days/saturday.html">Saturday</a></li>
+                            <li><a href="/pages/days/sunday.html">Sunday</a></li>
+                            </ul>
+                        </li>
+                    <li><a class="here" href="/pages/form.html">Submit</a></li>
+                </ul>
+            </div>
+            <div class="main">
+                    <h2>Submit a new activity:</h2>
+                    <form action="https://formspree.io/ljohnston931@gmail.com" method="POST">
+                        <p>Email Address:</p>
+                        <input class="box" type="email" name="_replyto" class="box">
+                        <br>
+                        <p>Describe Activity:</p>
+                        <input class="box" type="text" name="message" class="box">
+                        <br>
+                        <br>
+                        <input class="button" type="submit" value="Send" class="send">
+                    </form>
+            </div>
+            <div class="footer">
+                <p>Created by: Lucy Johnston 
+                <br> GitHub URL: https://github.com/ljohnston931/howcanihelp</p>        
+            </div>
+        </div>   
+    </body>
+</html>
