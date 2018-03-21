@@ -1,25 +1,8 @@
 <template>
     <div class="container">
-        <div class="header">
-            <ul id="menu">
-                <li><a href="../index.html">Home</a></li>
-                <li>
-                    <a class="here" href="/pages/which_day.html">Days<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                    <ul class="hidden">
-                        <li><a href="/pages/days/monday.html">Monday</a></li>
-                        <li><a href="/pages/days/tuesday.html">Tuesday</a></li>
-                        <li><a href="/pages/days/wednesday.html">Wednesday</a></li>
-                        <li><a href="/pages/days/thursday.html">Thursday</a></li>
-                        <li><a href="/pages/days/friday.html">Friday</a></li>
-                        <li><a href="/pages/days/saturday.html">Saturday</a></li>
-                        <li><a href="/pages/days/sunday.html">Sunday</a></li>
-                    </ul>
-                </li>
-                <li><a href="/pages/form.html">Submit</a></li>
-            </ul>
-        </div>
         <div class="main">
             <h2>Which day works best for you?</h2>
+            <div id="doweek">
             <a class="days" href="/pages/days/monday.html">Monday</a>
             <a class="days" href="/pages/days/tuesday.html">Tuesday</a>
             <a class="days" href="/pages/days/wednesday.html">Wednesday</a>
@@ -27,11 +10,7 @@
             <a class="days" href="/pages/days/friday.html">Friday</a>
             <a class="days" href="/pages/days/saturday.html">Saturday</a>
             <a class="days" href="/pages/days/sunday.html">Sunday</a>
-        </div>
-        <div class="footer">
-                <p>Created by: Lucy Johnston 
-                        <br> GitHub URL: https://github.com/ljohnston931/howcanihelp</p>        
-                
+            </div>
         </div>
     </div>
 </template>
@@ -43,13 +22,7 @@ export default {
 </script>
 
 <style scoped>
-body {
-    color: #303846;
-    background-color: #f5f5f5;
-    font-size: 16px;
-    font-family: 'Monserrat', sans-serif;
-    padding: 20px 50px 50px 50px;
-}
+
 .container {
     display: grid;
     grid-template-rows: 40px 1fr 40px;
@@ -61,92 +34,18 @@ body {
     grid-gap: 20px;
     font-size: 20px;
 }
-.header {
-    grid-area: header;
-    display: inline-block;
-    padding:0px;
-    height:40px;
-    position: relative;
-    z-index: 3000;
-}
-.header ul {
-    list-style-type:none;
-    margin:0;
-    padding:0;
-    position:absolute;
 
-}
-
-.header li {
-    display:inline-block;
-    float: left;
-    margin-right:10px;
-}
-
-.header li a {
-    display: block;
-    min-width: 140px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    text-decoration: none;
-    background-color: #4e595d;
-    color: #f5f5f5;
-}
-
-.here  {
-    background-color: #e5b121 !important;
-}
-
-.header a:hover {
-    background: #e5b121;
-}
-
-.header li:hover ul a {
-    background-color: #4e595d;
-    color: #f5f5f5;
-    height: 40px;
-    line-height: 40px;
-}
-
-.header li:hover ul a:hover {
-    background-color: #e5b121;
-}
-
-.header li ul {
-    display: none;
-}
-
-.header li ul li {
-    display: block ;
-    float: none;
-    z-index: 1000;
-}
-
-.header ul li a:hover + .hidden, .hidden:hover {
-    display: block;
-}
-
-.banner {
-    position: relative;
-    z-index: 1000;
-    text-align: center;
-    color:#e5b121;
-    font-size:  150px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-
-}
-
-.bottom-left {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-}
 .main {
     grid-area: main;
     padding: 0px;
-    min-height: 600px
+    min-height: 400px;
+
+}
+
+#doweek {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main p {
@@ -154,10 +53,6 @@ body {
     
 }
 
-#subtitle{
-    font-size: 40px;
-    margin-top: 10px;
-}
 
 .button {
     background-color: #e5b121;
@@ -196,6 +91,7 @@ body {
 h2 {
     font-size: 60px;
     color: #e5b121;
+    font-weight: 800;
 }
 
 .box {

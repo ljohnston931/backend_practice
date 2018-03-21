@@ -5,16 +5,16 @@
             <li>
                     <router-link to="/which_day">Days<i class="fa fa-angle-down" aria-hidden="true"></i></router-link>
                     <ul class="hidden">
-                        <li><a href="/pages/days/monday.html">Monday</a></li>
-                        <li><a href="/pages/days/tuesday.html">Tuesday</a></li>
-                        <li><a href="/pages/days/wednesday.html">Wednesday</a></li>
-                        <li><a href="/pages/days/thursday.html">Thursday</a></li>
-                        <li><a href="/pages/days/friday.html">Friday</a></li>
-                        <li><a href="/pages/days/saturday.html">Saturday</a></li>
-                        <li><a href="/pages/days/sunday.html">Sunday</a></li>
-                    </ul>
+                        <li><router-link to='/monday'>Monday</router-link></li>
+                        <li><router-link to='/tuesday'>Tuesday</router-link></li>
+                        <li><router-link to='/wednesday'>Wednesday</router-link></li>
+                        <li><router-link to='/thursday'>Thursday</router-link></li>
+                        <li><router-link to='/friday'>Friday</router-link></li>
+                        <li><router-link to='/saturday'>Saturday</router-link></li>
+                        <li><router-link to='/sunday'>Sunday</router-link></li>
+                  </ul>
                 </li>
-            <li><a href="/pages/form.html">Submit</a></li>
+            <li><router-link to='/submit'>Submit</router-link></li>
         </ul>
     </div>
 </template>
@@ -26,25 +26,10 @@ export default {
 </script>
 
 <style scoped>
-body {
-    color: #303846;
-    background-color: #f5f5f5;
-    font-size: 16px;
-    font-family: 'Monserrat', sans-serif;
-    padding: 20px 50px 50px 50px;
-}
-.container {
-    display: grid;
-    grid-template-rows: 40px 1fr 40px;
-    grid-template-columns: 100% 100% 100%;
-    grid-template-areas:
-    "header"
-    "main"
-    "footer";
-    grid-gap: 20px;
-    font-size: 20px;
-}
+
 .header {
+    font-size: 20px;
+    padding: 20px 50px 50px 50px;
     grid-area: header;
     padding:0px;
     height:40px;
@@ -107,77 +92,6 @@ body {
 
 .header ul li a:hover + .hidden, .hidden:hover {
     display: block;
-}
-
-.banner {
-    position: relative;
-    z-index: 1000;
-    text-align: center;
-    color:#e5b121;
-    font-size:  150px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-
-}
-
-.bottom-left {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-}
-.main {
-    grid-area: main;
-    padding: 0px;
-    min-height: 600px
-}
-
-.main p {
-    max-width: 800px;
-    
-}
-
-#subtitle{
-    font-size: 40px;
-    margin-top: 10px;
-}
-
-.button {
-    background-color: #e5b121;
-    border:none;
-    color:#f5f5f5;
-    padding: 15px 32px;
-    text-align: center;
-    display:inline-block;
-    font-size: 16px;
-    text-decoration: none;
-}
-
-.days {
-    min-width: 170px;
-    margin-bottom: 10px;
-    margin-right: 5px;
-    background-color: #4e595d;
-    border:none;
-    color:#f5f5f5;
-    padding: 15px 32px;
-    text-align: center;
-    display:inline-block;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.days:hover {
-    background: #e5b121;
-}
-
-.footer {
-    grid-area: footer;
-    text-align: center;
-}
-
-h2 {
-    font-size: 60px;
-    color: #e5b121;
 }
 
 .box {

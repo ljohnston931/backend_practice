@@ -28,12 +28,19 @@ app.put('/api/items/:id', (req, res) => {
 
 app.post('/api/items', (req,res) => {
     id = id + 1;
-    let item = {id:id, text:req.body.text, committed:req.body.committed};
+    let item = {id:id, 
+        text:req.body.text, 
+        day:req.body.day, 
+        committed:req.body.committed,
+        link:req.body.link,
+        time:req.body.time,
+        description:req.body.description,
+    };
     if (item.committed) {
         item.committedDate = Date.now();
     }
     items.push(item);
-    items.send(item);
+    res.send(item);
 });
 
 app.delete('/api/items/:id', (req, res) => {
